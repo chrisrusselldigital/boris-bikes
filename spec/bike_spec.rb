@@ -10,6 +10,10 @@ describe "Bike" do
   end
 
   it "docks bike" do
-    expect(Bike.new.dock_bike).to eq "docked"
+    expect(Bike.new.dock_bike).to eq true
+  end
+
+  it "checks if bike is docked" do
+    expect(Bike.new.dock_bike?).to eq true
   end
 end

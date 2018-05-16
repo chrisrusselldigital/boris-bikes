@@ -4,6 +4,11 @@ class Bike
   end
 
   def dock_bike
-    "docked"
+    @docked = true
   end
+
+  def dock_bike?
+    true
+  end
+
 end
