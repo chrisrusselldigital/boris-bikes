@@ -6,10 +6,6 @@ describe DockingStation do
     expect(DockingStation.new).to respond_to(:release_bike)
   end
 
-  it "gets bike" do
-    expect(DockingStation.new.release_bike.working?).to eq true
-  end
-
   it "can we release_bike?" do
     bike = Bike.new
     subject.dock(bike)
