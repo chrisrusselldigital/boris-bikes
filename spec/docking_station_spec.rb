@@ -3,22 +3,15 @@ require "bike"
 
 describe "DockingStation" do
   it "DockingStation respond_to? release_bike" do
-    expect(DockingStation.new).to respond_to(:release_bike)
+    expect(DockingStation.new(Bike.new)).to respond_to(:release_bike)
   end
 
   it "gets bike" do
-    expect(DockingStation.new.release_bike.working?).to eq true
-  end
-
-  it "docking station responds to dock bike" do
-    expect(DockingStation.new).to respond_to(:dock_bike)
-  end
-
-  it "docks bike" do
-    expect(DockingStation.new.dock_bike).to eq 1
+    expect(DockingStation.new(Bike.new).release_bike.working?).to eq true
   end
 end
 
-
-#Write a unit test for the method you need to add to
-#DockingStation to make docking possible
+#Use an instance variable with attr_reader to
+#do a full test-implementation
+#cycle for the second User Story above
+#require_relative './lib/docking_station.rb'

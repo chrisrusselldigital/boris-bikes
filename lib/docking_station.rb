@@ -1,13 +1,14 @@
-require 'bike'
+require_relative 'bike'
 
 class DockingStation
+  attr_reader 'bike'
 
-  def release_bike
-    Bike.new
+  def initialize(bike)
+    @bike = bike
   end
 
-  def dock_bike
-    1
+  def release_bike
+    @bike
   end
 
 end
