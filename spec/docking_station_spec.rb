@@ -9,9 +9,16 @@ describe "DockingStation" do
   it "gets bike" do
     expect(DockingStation.new.release_bike.working?).to eq true
   end
+
+  it "docking station responds to dock bike" do
+    expect(DockingStation.new).to respond_to(:dock_bike)
+  end
+
+  it "docks bike" do
+    expect(DockingStation.new.dock_bike).to eq 1
+  end
 end
 
 
-
-# Add a test to your DockingStation specification that
-# a) gets a bike, and then b) expects the bike to be working
+#Write a unit test for the method you need to add to
+#DockingStation to make docking possible
