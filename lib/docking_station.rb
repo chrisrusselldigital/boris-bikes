@@ -4,9 +4,9 @@ class DockingStation
 
 DEFAULT_CAPACITY = 20
 
-  attr_reader :bike, :capacity
+  attr_reader :capacity, :bikes
 
-  def initialize(capacity = DEFAULT_CAPACITY)
+  def initialize(capacity=DEFAULT_CAPACITY)
     @bikes = []
     @capacity = capacity
   end
@@ -23,9 +23,10 @@ DEFAULT_CAPACITY = 20
 
 
   private
+  # attr_reader :bikes (WHY DOES THIS THROW AN rspec ERROR???)
 
   def full?
-    bikes.count >= DEFAULT_CAPACITY
+    bikes.count >= @capacity
   end
 
   def empty?
